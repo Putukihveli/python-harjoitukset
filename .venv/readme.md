@@ -4,7 +4,7 @@
 
 ## Moduuli 1
 
-Tein tehtävät x x
+Tein tehtävät 1 ja 2 21.8.2026
 
 ## Moduuli 2
 
