@@ -10,14 +10,14 @@ Tein tehtävät 1 ja 2.
 
 ## Moduuli 2
 24.8.2026
-Tein tehtävät 1,2,3 ja 4 
+Tein tehtävät 1,2,3 ja 4. Puolet kuutosesta.
 1. Ohjelma joka kysyy nimen ja tervehtii.*
 2. Kysyy ympyrän säteen ja tulostaa pinta-alan.
 3. Kysyy suorakulmion kannan sekä korkeuden ja tulostaa piirin ja pinta-alan.
 4. Kysyy kolme kokonaislukua, ohjelma tulostaa summan, tulon ja keskiarvon.
 
-25.8.2026 - En saanut tehtävävä 5 tehtyä.
+25.8.2026 - En saanut tehtävää 5 tehtyä.
 
-Sain tehtyä tehtävän 6 ensimmäisen osan, suurin haaste oli se keksiä/löytää tieto miten saada mahdollinen numeromerkki olemaan myös 000-100.
- tähän löysin komennon Zfill(x) joka ymmärtääkseni toimii kun muutetaan random.randint'n antama numerosarja str muotoon jolloinka siihen voidaan lisätä etunollia, kun random numero sattuu olemaan esimerkiksi 1 jolloinka 1 = 001, 10 = 010 etc.
+Sain tehtyä tehtävän 6 ensimmäisen osan, suurin haaste oli keksiä/löytää tieto miten saada mahdollinen numeromerkki olemaan myös 000-100.
+ tähän löysin komennon Zfill(x) joka toimii kun muutetaan random.randint'n antama numerosarja str muotoon jolloinka siihen voidaan lisätä etunollia, kun random numero sattuu olemaan esimerkiksi 1 jolloinka 1 = 001, 10 = 010 etc.
 
