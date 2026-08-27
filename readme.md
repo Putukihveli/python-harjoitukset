@@ -2,13 +2,13 @@
 
 **Arttu-Oskari Aarrejärvi**
 
-## Moduuli 1
+## Moduuli 1 ja 2
 24.8.2026
 Tein tehtävät 1 ja 2. 
 1. Ohjelma joka tervehtii nimeltä.
 2. Luo GitHub-käyttäjätili.
 
-## Moduuli 2
+## Moduuli 3
 24.8.2026
 Tein tehtävät 1,2,3 ja 4. Puolet kuutosesta.
 1. Ohjelma joka kysyy nimen ja tervehtii.*
