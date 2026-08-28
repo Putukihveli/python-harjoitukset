@@ -21,3 +21,4 @@ Tein tehtävät 1,2,3 ja 4. Puolet kuutosesta.
 Sain tehtyä tehtävän 6 ensimmäisen osan, suurin haaste oli keksiä/löytää tieto miten saada mahdollinen numeromerkki olemaan myös 000-100.
  tähän löysin komennon Zfill(x) joka toimii kun muutetaan random.randint'n antama numerosarja str muotoon jolloinka siihen voidaan lisätä etunollia, kun random numero sattuu olemaan esimerkiksi 1 jolloinka 1 = 001, 10 = 010 etc.
 
+

@@ -1,9 +1,15 @@
 import random
-#koodi1_str = str(random.randint(0, 999)).zfill(3)
-#print(koodi1_str)
+koodi1_str = str(random.randint(0, 999)).zfill(3)
+print(koodi1_str)
 
-luku1_str = float(random.randint(0,9))
-luku2_str = float(random.randint(0,9))
-luku3_str = float(random.randint(0,9))
+k1 = random.randint(1,6)
+k2 = random.randint(1,6)
+k3 = random.randint(1,6)
+k4 = random.randint(1,6)
 
-print ('int(luku1_str) + int(luku2_str) + int(luku3_str)')
+print(f"{k1}{k2}{k3}{k4}")
+
+
+#luku1_str = float(random.randint(0,9))
+#luku2_str = float(random.randint(0,9))
+#luku3_str = float(random.randint(0,9))

@@ -1,3 +1,9 @@
+import math
+#print(math.fmod(20, 4))
+#print(math.fmod(20, 3))
+#print(math.fmod(15, 6))
+#print(math.fmod(-10, 3)) 
+
 #massi = float(input("anna massit: "))
 #if massi >= 7:
 #    print ("Sait kahvin: ")
@@ -22,15 +28,18 @@
 #
 
 
+#kerrat = int(input("Montako kertaa tervehditään: "))
+#tehdyt = 0
+#while tehdyt < kerrat:
+#    print("Hyvää huomenta")
+#    tehdyt = tehdyt + 1
 
-
-ikä = int(input("Anna ikäsi: "))
-if ikä >= 65:
-    print("Olet eläkeiässä.")
-if ikä >= 18:
-    print("Olet työiässä.")
-if ikä >= 7:
-    print("Olet koululainen.")
+komento = input("Anna komento  : ")
+while komento != "lopeta":
+    if komento == "MAYDAY":
+        break
+    print("Suoritan toiminnon: " + komento)
+    komento = input("Anna komento: ")
 else:
-    print("Olet pikkulapsi.")
-
+    print("Näkemiin.")
+print("Toiminnot lopetettu.")
