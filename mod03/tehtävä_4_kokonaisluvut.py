@@ -10,3 +10,14 @@ print(f"{'Lukujen keskiarvo':9s}:{(int(yksi)+int(kaksi)+int(kolme)) /3 :0.1f}")
 
 
 
+#
+
+summa = yksi + kaksi + kolme
+tulo = yksi * kaksi * kolme
+keskiarvo = summa / 3
+
+print(f"lukujen summa: {summa}")
+
+
+
+
