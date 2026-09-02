@@ -9,14 +9,3 @@ while tuuma >= 1:
 if tuuma == 0:
     print(" 0 tuumaa = 0 cm")
 else: print (f"{tuuma} on virheellinen tuumamäärä!")
-
-
-#tuuma = int(input("Anna tuuma: "))
-#while tuuma >= 1:
-#    cm = tuuma * 2.54
-#    print (f"{cm} cm")
-#    tuuma = float(input("Anna tuuma: "))
-#else: print (f"{tuuma} on virheellinen tuumamäärä!")
-
-
-#tuuma = tuuma -2

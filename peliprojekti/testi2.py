@@ -1,4 +1,5 @@
-menu = ("\nvalikko1 \nvalikko2 \nvalikko3 \nvalikko4\n \nVikatilanteissa kokeile 'apua' ")
+#komennot = [Lopeta, apua]
+menu = ("\nvalikko1 \nvalikko2 \nvalikko3 \nvalikko4")
 menu2 = ("\nvalikko1 <- \nvalikko2 <- \nvalikko3 <- \nvalikko4 <-")
 nimi = (input("Anna nimesi: "))
 ikä = int(input("Anna ikäsi: "))
@@ -9,11 +10,8 @@ if ikä >= 12:
     valikko = (input("\nMitäs seuraavaksi: "))
     while valikko != "Lopeta": 
         if valikko == "apua": 
-            print("\nValikoista saat avattua valikoita!")
-            valikko = (input(f"{menu2}\n \nMitäs seuraavaksi?: "))
-        if valikko == "käyttäjä":
-            print(f"-{nimi}{ikä}-")
-        valikko = (input(f"{menu}\n \nMitäs seuraavaksi: "))
+            valikko = (input(f"{menu2}\n \nValikoista saat avattua valikoita!: "))
+    valikko = (input(f"{menu}\n \nMitäs seuraavaksi: "))
     
     if valikko == "Lopeta":
         print("Peli loppuu")
@@ -22,3 +20,15 @@ if ikä >= 12:
               
 elif ikä <= 12:
     print("Olet liian nuori!")
+
+
+
+
+
+#while answer != '4':
+#
+ #   answer = input()
+  #  if answer == '4':
+   #     print("Great job!")
+    #else:
+     #   print ("Nope! please try again.")

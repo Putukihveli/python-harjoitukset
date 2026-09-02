@@ -10,30 +10,30 @@
 #  komentoja, kunnes käyttäjä kirjoittaa “lopeta”.
 #  Lisää muutama keksitty komento, jotka antavat keskenään erilaisen tulosteen konsoliin. Komennon jälkeen tulostetaan valikko aina uudelleen.
 
+menu = ("\nvalikko1 \nvalikko2 \nvalikko3 \nvalikko4\n \nVikatilanteissa kokeile 'apua' ")
+menu2 = ("\nvalikko1 <- \nvalikko2 <- \nvalikko3 <- \nvalikko4 <-")
 nimi = (input("Anna nimesi: "))
 ikä = int(input("Anna ikäsi: "))
-#print (f"Pelaaja: {nimi}{ikä}")
-while ikä >= 12:
-    print(f"{nimi}{ikä} - Tervetuloa peliin!")
 
-    print("\nvalikko1 \nvalikko2 \nvalikko3 \nvalikko4")
-    break
-if ikä < 12: 
-    print ("Alaikäikäinen, peli sulkeutuu!")
+if ikä >= 12:
+    print(f"{nimi}{ikä} - Tervetuloa peliin!")
+    print (menu)
+    valikko = (input("\nMitäs seuraavaksi: "))
+    while valikko != "Lopeta": 
+        if valikko == "apua": 
+            print("\nValikoista saat avattua valikoita!")
+            valikko = (input(f"{menu2}\n \nMitäs seuraavaksi?: "))
+        if valikko == "käyttäjä":
+            print(f"-{nimi}{ikä}-")
+        valikko = (input(f"{menu}\n \nMitäs seuraavaksi: "))
+    
+    if valikko == "Lopeta":
+        print("Peli loppuu")
     
 
-
-valikko = (input("\nMitäs seuraavaksi: "))
-if valikko == "Lopeta": 
-    print ("heihei!")
-
-
-
-
-
-
-
-#elif input
+              
+elif ikä <= 12:
+    print("Olet liian nuori!")
 
 
       
