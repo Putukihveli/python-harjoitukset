@@ -4,12 +4,13 @@
 import random
 
 def noppa():
-    (random.randint(1, 6))
-    print(random.randint (1,6))
-    return
+    return random.randint(1,6)
 
-print("Heitetään noppaa!")
-if noppa == 6:
-    noppa()
-    print ("noppa")
+heitot = 1
+heitto = noppa()
+while heitto != 6:
+    heitot += 1
+    print(heitto)
+    heitto = noppa()
 
+print (f"{heitto} Heitit kuutosen! \nTämä vaati {heitot} heittoa! ")

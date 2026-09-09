@@ -30,4 +30,8 @@ Sain tehtyä tehtävän 6 ensimmäisen osan, suurin haaste oli keksiä/löytää
 
 ## Moduuli 6
 2.9.2026
-Tehty ensimmäinen tehtävä.
+Tehty ensimmäinen, toinen ja viimeinen tehtävä.
+
+## Moduuli 7
+8.9.2026 - tehty moduulia eteenpäin-
+9.9.2026 - jatkettu moduulia, edetty projektin kanssa.

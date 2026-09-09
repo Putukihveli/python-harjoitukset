@@ -22,57 +22,45 @@ inventaario = []
 i = 0
 
 def reppu():
-
-    tavara = input ("\nLisätään tavara reppuun:")
+    tavara = input ("\n lisätään tavara reppuun:")
     if tavara:
         inventaario.append(tavara)
-        print (f"Reppuun lisättiin: {tavara}")
+        print (f"reppuun lisättiin: {tavara}")
+    else: (" mitään ei lisätty reppuun")
     return
-
-def tavarat():
-    print ("Reppusi sisältää seuraavat asiat:" (inventaario))
-    return
-
-#def
-
 
 menu = ("\nKauppa \nReppu \nvalikko3 \nvalikko4\n ")  #\nVikatilanteissa kokeile 'apua'
-menu2 = ("\nKauppa <- \nReppu <- \nvalikko3 <- \nvalikko4 <- \n")
+menu2 = ("\nKauppa <- \nReppu <- \nvalikko3 <- \nvalikko4 <-")
 nimi = (input("Anna nimesi: "))
 ikä = int(input("Anna ikäsi: "))
 
 if ikä >= 12:
     print(f"{nimi}{ikä} - Tervetuloa peliin!")
     print (menu)
-    valikko = (input("Mitäs seuraavaksi: "))
+    valikko = (input("\nMitäs seuraavaksi: "))
     if valikko == "Lopeta":
         print("Peli Loppuu")
     while valikko != "Lopeta": 
         if valikko == "apua": 
             print("\nValikoista saat avattua valikoita!")
-            valikko = (input(f"{menu2}\n \nMitäs seuraavaksi?: "))
+            valikko = (input(f"{menu2} \nMitäs seuraavaksi?: "))
         if valikko == "käyttäjä":
             print(f"-{nimi}{ikä}-")
-            valikko = (input(f"{menu}\n \nMitäs seuraavaksi: "))
+            valikko = (input(f"{menu} \nMitäs seuraavaksi: "))
         if valikko == "Lopeta":
             print("Peli loppuu")
-        if valikko == "Kauppa":
-            print("Saat lisätä neljä tuoetta reppuusi")
+        elif valikko == "Kauppa":
             while i <= 3:
                 reppu()
                 i += 1
             else:
                 print(f"Reppusi on täynnä!")
                 valikko = (input(f"{menu} \nMitäs seuraavaksi: "))
-        if valikko == "Reppu":
-            tavarat()
-            valikko = (input(f"{menu}\n \nMitäs seuraavaksi: "))
         else:
             print("Virheellinen komento, kokeile 'apua' \n")
             valikko = (input(f"{menu} \nMitäs seuraavaksi: "))
             if valikko == "Lopeta":
                 print("Peli loppuu")
-        
 else:
     print("Olet liian nuori!")
 
