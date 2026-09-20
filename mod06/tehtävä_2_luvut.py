@@ -8,6 +8,9 @@ luku =  input("Anna luku: ")
 while luku != (""):
     luvut.append(int(luku))
     luku = input("Anna luku tai lopeta painamalla Enter: ")
+    
 
-    luvut.sort(reverse=True)
-print(luvut[:5])
+luvut.sort(reverse=True)
+for luku in luvut:
+    print(luvut)
+    #print(luvut[:5])

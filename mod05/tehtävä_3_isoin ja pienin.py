@@ -23,3 +23,19 @@ else:
 
     print(f"Pienin luku: {pienin}")
     print(f"Isoin luku: {isoin}")
+
+lukuStr = input("Anna luku: ")
+suurin = int(lukuStr)
+pienin = int(lukuStr)
+
+while lukuStr != "":
+    lukuStr = input("Anna luku: ")
+    if lukuStr != "":
+        lukuInt = int(lukuStr)
+    if lukuInt > suurin:
+        suurin = lukuInt
+    if lukuInt < pienin:
+        pienine = lukuInt
+
+print(suurin)
+print(pienin)

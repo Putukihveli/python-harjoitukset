@@ -9,3 +9,11 @@ while tuuma >= 1:
 if tuuma == 0:
     print(" 0 tuumaa = 0 cm")
 else: print (f"{tuuma} on virheellinen tuumamäärä!")
+
+
+while True:
+    tuumat = float(input("Anna tuumamäärä: "))
+    if tuumat < 0:
+        break
+    senttrimetri = tuumat * 2.54
+    print(f"{senttrimetri} cm")

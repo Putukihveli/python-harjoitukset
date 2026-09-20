@@ -3,21 +3,16 @@
 # Kirjoita testausta varten pääohjelma, jossa luot listan, kutsut funktiota ja tulostat sen jälkeen sekä alkuperäisen että karsitun listan.
 
 import math
-def lista(luvut):
-    return (luvut)
+def jako(lista):
+    uusi_lista = []
+    for num in (lista):
+     if num % 2 == 0:
+        uusi_lista.append(num)
 
-luvut = []
-luvut2 = []
-luku = (input("Anna ensimmäinen luku tai lopeta painamalla Enter: "))
-while luku != "":
-    luvut.append(int(luku))
-    luku = (input("Anna seuraava luku tai lopeta painamalla Enter: "))
-    if luku % 2 == 0:
-        luvut2.append(int(luku))
-
-
-print(luvut2)
-print (lista(luvut))
+lista = [1,2,3,4,5]
+uusi = jako(lista)
+print(lista)
+print(uusi)
 
 
 

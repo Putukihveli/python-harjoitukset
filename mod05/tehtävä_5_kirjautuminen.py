@@ -11,7 +11,7 @@ kysytty = 1
 
 
 while käyttäjä != "python" or salasana != "rules":
-    print("väärä")
+    print("Väärä käyttäjätunnus tai salasana. Yritä uudelleen.")
     käyttäjä = input("Anna käyttäjätunnus: ")
     salasana = input("Anna salasana: ")
     kysytty = kysytty + 1
