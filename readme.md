@@ -34,4 +34,4 @@ Tehty ensimmäinen, toinen ja viimeinen tehtävä.
 
 ## Moduuli 7
 8.9.2026 - tehty moduulia eteenpäin-
-9.9.2026 - jatkettu moduulia, edetty projektin kanssa.
+9.9.2026 - jatkettu moduulia, edetty projektin kanssa. 

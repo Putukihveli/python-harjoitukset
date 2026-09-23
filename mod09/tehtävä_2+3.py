@@ -10,7 +10,7 @@ class Auto:
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
         self.nopeus = 0
-        self.matka = 0
+        self.matka = 50
 
     def kiihdytä(self, kmh):
         uusi_nopeus = self.nopeus + kmh
@@ -22,21 +22,32 @@ class Auto:
         else:
             self.nopeus = uusi_nopeus
 
+
+    def kulje(self,tunti):
+            uusi_matka = self.nopeus * tunti
+            self.matka = uusi_matka + self.matka
+        
+
+        
+
 auto = Auto("ABC-123", 142,0,0)
-print(f"Rekisteritunnus: {auto.rekisteritunnus} Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}")
+print(f"Rekisteritunnus: {auto.rekisteritunnus} Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}\n") 
 
 print("Auton nopeus kasvaa 30km/h")
 auto.kiihdytä(30)
-print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}")
+auto.kulje(1)
+print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}\n" )
 
 print("Auton nopeus kasvaa 70km/h")
 auto.kiihdytä(70)
-print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}")
+auto.kulje(1)
+print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}\n")
 
 print("Auton nopeus kasvaa 50km/h")
 auto.kiihdytä(50)
-print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}")
+auto.kulje(1)
+print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}\n")
 
 print("Jumalauta peura! Jarruta!")
 auto.kiihdytä(-200)
-print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}")
+print(f"Huippunopeus: {auto.huippunopeus} Nopeus: {auto.nopeus} Kuljettu matka: {auto.matka}\n")

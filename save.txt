@@ -1,1 +1,1 @@
-{"pelaaja": "Matti", "taso": 5, "varusteet": ["miekka", "kilpi", "haarniska"]}
+Pelaaja pääsi tasolle 2.
