@@ -1,1 +1,10 @@
-{"pelaaja": "ARttu", "sijainti": "Taverna", "varusteet": []}
+{
+    "pelaaja": "Arttu",
+    "sijainti": "Taverna",
+    "varusteet": [
+        "Banaani",
+        "Kompassi",
+        "Excalibur",
+        "Säkki"
+    ]
+}

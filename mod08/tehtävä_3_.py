@@ -10,7 +10,6 @@ lentoasemat =  [{"asema": "Helsinki-Vantaa",
                  "ICAO": "EFHK"}]
 
 
-
 valinta = input("Haluatko etsiä tiedossa olevaa asemaa, vai antaa uuden? (Etsi / Uusi / Lopeta)")
 if valinta == "Lopeta":
      print("Heippa")

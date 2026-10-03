@@ -15,27 +15,30 @@ class Pelaaja(Humanoidi):
 
 
 class Esine:
-     def __init__(self, nimi, paino,):
+    def __init__(self, nimi, paino,):
         self.nimi = nimi
         self.paino = paino
 
+    def __repr__(self): #tällä pystyy määrittämään miltä olio näyttää listoissa. Jotta kauppiaan "hyllyä" tulostaessa ei näy object at 0x000 blablabla.
+        return self.nimi
+
 class Miekka(Esine):
     def __init__(self,nimi,paino,vahinko):
-        super().__init__(nimi, paino,)
-        self.vahinko = vahinko
+            super().__init__(nimi, paino,)
+            self.vahinko = vahinko
 
-    def __str__(self):
-        return (f"{self.nimi}, Paino: {self.paino}, Vahinko: {self.vahinko}")
+    #def __str__(self):
+    #    return (f"{self.nimi}, Paino: {self.paino}, Vahinko: {self.vahinko}")
 
 class Reppu(Esine):
-    def __int__(self,paino,):
-          super().__init__(paino)
+    def __int__(self,paino,nimi):
+          super().__init__(nimi,paino)
           self.tavarat = []
-    def __str__(self):
-        return(f"Nyssykkä jonne voi lisätä tavaroita!")
+    #def __str__(self):
+        #return(f"Nyssykkä jonne voi lisätä tavaroita!")
 
 class Huone:
-    def __init__(self,nimi,valaistus,lämpötila,sijainti):
+    def __init__(self,nimi,valaistus,lämpötila,sijainti,):
         self.nimi = nimi
         self.valaistus = valaistus
         self.lämpötila = lämpötila
@@ -48,8 +51,9 @@ class Luola(Huone):
      self.sijainti = "Maan alla"
 
 class Kauppa(Huone):
-    def __init__(self,nimi,valaistus,lämpötila,sijainti):
+    def __init__(self,nimi,valaistus,lämpötila,sijainti,):
      super().__init__(nimi,valaistus,lämpötila,sijainti)
-     self.tavarat = ['Excalibur'] # Voiko listassa olla luokkia ja merkkijonoja? Miten ostan kaupasta normaalin omenan ja luokaksi luodun Miekan?
-
+     self.hylly = ["Banaani", "Kompassi"]
+    def lisaa_tuote(self, uusi_tuote):
+        self.hylly.append()
 

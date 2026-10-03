@@ -11,5 +11,15 @@ Tuloste sotkuista sekamelskaa, tarkoituksena siistiä tätä lähipäivinä.
 - Luotu kansiorakenne, siirretty funktiot ja luokat omiin tiedostoihin "hahmo" kansion alle. Saatu import komento toimimaan.
 
 23.9 - Pelin teema olisi fantasia, mahdollisesti kohdataan monstereita/humanoideja ja tutkitaan luola.
- - Luotu luola ja lyönti funktit seka into.txt ja ohjeet.txt.
+ - Luotu luola ja lyönti funktio seka into.txt ja ohjeet.txt.
  - Luotu funktio tallennukselle mutta jostain syystä en saanut toimimaan inventaarion tulostusta tallennuksen yhteydessä.
+
+2.10 muistettu uudestaan että tätäkin kuuluu päivittää..
+Luotu toinen versio "Ohjeet" komennosta, jos ajat sen kaupassa käynnin jälkeen, saat ilmoituksetn että olitkin jo shoppaillut jne.
+paranneltu kaupan ja repun välistä toimintaa. Nyt kauppaan luodaan omat tuotteet jotka poistuvat "hyllyltä" sitä mukaa kun ne listätään pelaajan reppuu.
+Saatu myös oliot näkymään/siirtymään reppuun oikein ja tulostumaan oikein.
+Saatu tallennus toimimaan ja tallenuksen yhteydessä tulostettaessa pelaajan inventaario.
+
+3.10
+
+

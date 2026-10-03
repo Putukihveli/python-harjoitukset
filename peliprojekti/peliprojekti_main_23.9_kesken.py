@@ -34,7 +34,7 @@ nimi = (input("Anna nimesi: "))
 ikä_1 = int(input("Anna ikäsi: "))
 
 pelaaja1 = Pelaaja(nimi,ikä_1,"Taverna",)
-aloitus = Huone("Taverna","Hämärä","Lämmin","Kaupunki")
+aloitus_huone = Huone("Taverna","Hämärä","Lämmin","Kaupunki")
 kauppias = Kauppa("Kauppa","Kirkas","Lämmin", "Kaupunki")
 ase = Miekka("Excalibur", ("5kg"), "4-12.")
 laukku = Reppu("Säkki", 5,)
