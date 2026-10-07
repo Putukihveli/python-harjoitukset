@@ -13,9 +13,8 @@ def reppu(kauppa,inventaario):
             print (f"Reppuun lisättiin: {tuote}")
             if str(tuote) == "Banaani":
                 print("\nTämä tulee varmasti tarpeeseen tulevaisuudessa!")
-
+        else: print("Kauppias ei tainnut kuulla mitä sanoit?")
         break
-    else: print("Kauppias ei tainnut kuulla mitä sanoit?")
 
  
 def tavarat(inventaario):

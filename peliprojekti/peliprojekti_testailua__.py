@@ -83,7 +83,7 @@ if ikä_1 >= 12:
         elif valikko == "Tiedot" and pelin_tila == 2:
             print (f"\nNimi: {pelaaja1.nimi}{pelaaja1.ikä} \nSijainti: {pelaaja1.paikka}\nElämäpisteet: {pelaaja1.hp}\nInventaario: {pelaaja1.inventaario}")
             valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
-        elif valikko == "Tiedot" and pelin_tila == 2:
+        elif valikko == "Tiedot" and pelin_tila == 3:
             print (f"\nNimi: {pelaaja1.nimi}{pelaaja1.ikä} \nSijainti: {pelaaja1.paikka}\nElämäpisteet: {pelaaja1.hp}\nInventaario: {pelaaja1.inventaario}")
             valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
         elif valikko == "Tallenna":
@@ -101,7 +101,7 @@ if ikä_1 >= 12:
                 reppu(kauppias, inventaario)
                 if len (inventaario) == 4:
                     print("\nKaikki tuotteet on ostettu ja reppusi on nyt täysi!")
-                    print_slow("\nTesti") #Kaupungin hälytyskellot soivat! Metsän laidalta on kuulunut kiljuntaa!"
+                    print_slow("\nKaupungin hälytyskellot soivat! Metsän laidalta on kuulunut kiljuntaa!") #Hidas ja dramaattinen tulostus.
                     #pelin_tila == 2
                     if a == 1: menu = menu3 # Kun kaupassa on käyty, menu vaihtuu menu3 josta löytyy mahdollisuus siirtyä metsään.
                     valikko = input(f"{menu} \nMitäs seuraavaksi: ")
@@ -112,11 +112,11 @@ if ikä_1 >= 12:
         elif valikko == "Reppu" and pelin_tila == 0:
             tavarat (pelaaja1.inventaario)
             valikko = (input(f"{menu} \nMitäs seuraavaksi: "))
-        elif valikko =="Reppu" and pelin_tila == 3:
-            tavarat (pelaaja1.inventaario)
-            print(f"{pelaaja1.nimi}, Elämäpisteet: {pelaaja1.hp}")
-            print(f"{luuranko.nimi}, Elämäpisteet: {luuranko.hp}")
-                
+        #elif valikko =="Reppu" and pelin_tila == 3:
+            #tavarat (pelaaja1.inventaario)
+            #print(f"{pelaaja1.nimi}, Elämäpisteet: {pelaaja1.hp}")
+            #print(f"{luuranko.nimi}, Elämäpisteet: {luuranko.hp}")
+            #valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
         elif valikko == "Metsä":
             valikko = input(f"Saavut kaupungin reunalla sijaitsevan {Metsä.nimi}'n laidalle. Käännytkö pelkurina takaisin vai jatkatko matkaasi syvemmälle metsään? \n| Kaupunki | | Seikkailu |: ")
             if valikko == "Kaupunki":
@@ -134,25 +134,21 @@ if ikä_1 >= 12:
                 pelaaja1.vaihda_sijaintia(Luola_1)
                 print(f"Elämäpisteesi: {pelaaja1.hp}")
                 valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
-        elif valikko == "Reppu" and "Banaani" in inventaario and pelin_tila == 2 or pelin_tila == 3: #Repusta pystyy nyt syömään banaanin joka antaa 10 elämäpistettä.
+        elif valikko == "Reppu" and "Banaani" in inventaario and (pelin_tila == 2 or pelin_tila == 3): #Repusta pystyy nyt syömään banaanin joka antaa 10 elämäpistettä.
                 tavarat (pelaaja1.inventaario)
                 ruokailu = input(f"Tahtoisitko kenties syödä banaanisi? Kyllä | Ei: ")
                 if ruokailu == "Kyllä":
                     print("Nom Nom!")
-                    pelaaja1.hp = pelaaja1.hp +10
+                    pelaaja1.hp = pelaaja1.hp +15
                     print(f"Elämäpisteesi: {pelaaja1.hp}")
                     inventaario.remove("Banaani")
                     print("Muista kierrättää ja siivota kuoret ja muutkin matkalla syntyvät roskat!") #Kestävän kehityksen tavoitteet 12,13 ja 15. Muistakaa kierrättää ja siivota omat roskat!
                     tavarat(pelaaja1.inventaario)
-                if ruokailu == "Ei":
+                elif ruokailu == "Ei":
                      print("Ehkä myöhemmin")
                      tavarat(pelaaja1.inventaario)
                 if pelin_tila == 2:
-                        valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
-                if pelin_tila == 3:
-                        valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
-                if pelin_tila == 2:
-                    valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
+                     valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
                 if pelin_tila == 3:
                     valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
         elif valikko == "Eteenpäin":
@@ -161,7 +157,7 @@ if ikä_1 >= 12:
              print ("Taistelu alkakoon!")
              print(f"{luuranko.nimi}, {luuranko.ikä} vuotias, Elämäpisteet: {luuranko.hp}")
              valikko = (input(f"{menu_3} \nMitä seuravaakasi: "))
-        while valikko == "Lyönti" and pelin_tila == 3:
+        elif valikko == "Lyönti" and pelin_tila == 3:
             print("\nHeilautat mahtavaa miekkaasi!")
             pelaaja1.lyönti(luuranko)
             
@@ -178,17 +174,20 @@ if ikä_1 >= 12:
                      quit()
             valikko = (input(f"{menu_3} \nMitä seuravaakasi: "))
 
-    else:
+        else:
             print("Tuntematon komento!") 
             if pelin_tila == 0:
-                valikko = (input(f"{menu2} \nMitäs seuraavaksi?: "))
+                        valikko = (input(f"{menu2} \nMitäs seuraavaksi?: "))
             if pelin_tila == 2:
-                           valikko = (input(f"{menu_2} \nMitäs seuraavaksi?: "))
+                                   valikko = (input(f"{menu_2} \nMitäs seuraavaksi?: "))
             if pelin_tila == 3:
-                valikko = (input(f"{menu_3} \nMitäs seuraavaksi?: "))
-
+                        valikko = (input(f"{menu_3} \nMitäs seuraavaksi?: "))
 if valikko == "Lopeta":
-            print("Peli Loppuu")
+            print("Peli loppuu")
+        
+
+    
+    
         
 else:
-    print("Olet liian nuori!")
+   print("Olet liian nuori!")

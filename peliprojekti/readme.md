@@ -24,7 +24,8 @@ Saatu myös oliot näkymään/siirtymään reppuun oikein ja tulostumaan oikein.
 Saatu tallennus toimimaan ja tallenuksen yhteydessä tulostettaessa pelaajan inventaario.
 
 3.10 - Lisätty ilmoitus kaupan jälkeen että metsässä tapahtuu ja menu jolla siirrytään kaupassa käynnin jälkeen metsään. Mahdollisuus myös kääntyi takaisin kaupunkiin jolloin peli loppuu.
- - Otettu kestävä kehitys huomioon banaaninkuorien kierrättämisellä.
-6.10
+Otettu kestävä kehitys huomioon banaaninkuorien kierrättämisellä.
+6.10 - päivitetty pelin_tila 1,2,3 ja valikoiden toiminta ja päivittyminen pelin tilan edetessä. Banaanin syöminen antaa 10 elämäpistettä.
 
-
+7.10 - Luotu taistelu luurangon kanssa ja lyönti funktio joka myöhemmin muutettu metodiksi humanoidin alle, mahdollisuus hävitä mikä banaania ei syödä. Päivitetty valikoita ja pelin_tilaa lisää.
+Saati taistelu luotua ja peli on valmis.
