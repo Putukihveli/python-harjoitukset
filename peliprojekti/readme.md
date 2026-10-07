@@ -1,6 +1,9 @@
 seikkailu
 Arttu-Oskari Aarrejärvi
 
+Pelin idea on käydä kauppiaalla hakemassa tarvikkeita joita hyödynnetään myöhäisemmässä vaiheessa.
+Seikkaillaan metsän kautta luolaan jossa päihitetään pelottavaa luuranko.
+
 31.8 - Aloitettu pelin tekeminen, saatu tehtyä osat Projekti 1 ja 2. Valikot "apua" ja "käyttäjä". 
 xx.x - Tehty projektin osa 2, "apua" ja "käyttäjä" valikot.
 9.9. - Tehty projekti osa 3, funktiot kaupalle sekä inventaariolle. Ei keksinyt mitään kolmanneksi funktioksi, pää lyö tyhjäää.
@@ -20,6 +23,8 @@ paranneltu kaupan ja repun välistä toimintaa. Nyt kauppaan luodaan omat tuotte
 Saatu myös oliot näkymään/siirtymään reppuun oikein ja tulostumaan oikein.
 Saatu tallennus toimimaan ja tallenuksen yhteydessä tulostettaessa pelaajan inventaario.
 
-3.10
+3.10 - Lisätty ilmoitus kaupan jälkeen että metsässä tapahtuu ja menu jolla siirrytään kaupassa käynnin jälkeen metsään. Mahdollisuus myös kääntyi takaisin kaupunkiin jolloin peli loppuu.
+ - Otettu kestävä kehitys huomioon banaaninkuorien kierrättämisellä.
+6.10
 
 

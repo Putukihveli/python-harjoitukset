@@ -1,33 +1,61 @@
 inventaario = []
 import random
 import json
+import sys,time
 
 
 def reppu(kauppa,inventaario):
-    haettu_tavara = input ("\nLisätään tavara reppuun:")
+    haettu_tavara = input ("\nLisätään tavara reppuun:") 
     for tuote in kauppa.hylly:
         if str(tuote) == haettu_tavara:
             kauppa.hylly.remove(tuote)
             inventaario.append(tuote)
             print (f"Reppuun lisättiin: {tuote}")
-            break 
+            if str(tuote) == "Banaani":
+                print("\nTämä tulee varmasti tarpeeseen tulevaisuudessa!")
+
+        break
+    else: print("Kauppias ei tainnut kuulla mitä sanoit?")
+
+ 
 def tavarat(inventaario):
     print (f"Repussasi on: {inventaario}")
     return
 
 
-def lyönti():
-    if Miekka == True:
-        print(f"Lyöntisi teki {vahinko} vahinkoa!")
-        vahinko = random.randint(4,12)
-        if Miekka == False:
-            print("Et voi lyödä ilman miekkaa!")
+#def pelaaja_lyönti():
+ #   vahinko = random.randint(4,12)
+ #   luuranko.hp = luuranko.hp - vahinko
+ #   print(f"Lyöntisi teki {vahinko} vahinkoa!")
+ #   return vahinko
+
+#def luuranko_lyönti():
+ #   vahinko = random.randint(4,12)
+  #  print(f"Lyöntisi teki {vahinko} vahinkoa!")
+  #  return vahinko
+
+
+ #def vaihda_sijaintia(self, uusi_paikka):
+        # if self.paikka != uusi_paikka:
+         # self.paikka = uusi_paikka
+         # print(f"{self.nimi} Siirtyi paikkaan: {uusi_paikka}")
+
+
+def print_slow(str): #dramaattinen tulostus lainattu stackoverflowsta :-D
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.2)
+
+#def vahinko():
+
+
 
 def tallenna(pelaaja1):
     varusteet_lista = [str(esine) for esine in pelaaja1.inventaario]
     tallennus_data = {
     "pelaaja": pelaaja1.nimi,
-    "sijainti": pelaaja1.sijainti,
+    "sijainti": pelaaja1.paikka,
     "varusteet": varusteet_lista,
 }
     with open("Save.json", "w", encoding="utf-8") as tiedosto:

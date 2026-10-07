@@ -8,4 +8,6 @@ from .luokat import Luola
 from .funktiot import tallenna
 from .funktiot import reppu
 from .funktiot import tavarat
-from .funktiot import lyönti
+#from .funktiot import lyönti
+from .funktiot import print_slow
+#from .funktiot import lyönti
