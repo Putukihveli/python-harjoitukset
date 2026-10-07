@@ -1,4 +1,3 @@
-
 import json
 import os
 import random
@@ -8,9 +7,6 @@ from hahmot import tavarat, reppu, tallenna, print_slow
 import sys,time
 
 inventaario = []
-
-
-
 
 #polku = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Save.json")
 
@@ -62,7 +58,7 @@ if ikä_1 >= 12:
     #print(f"{eteinen.nimi}")
 
     print (menu)
-    valikko = (input("Mitäs seuraavaksi: "))
+    valikko = (input("Mitäs seuraavaksi: ")) 
     while valikko != "Lopeta":
         if a == 1: menu = menu3
         if not valikko: #muistutus. if not valikko: on sama kuin, if valikko == "": .The not keyword is a logical operator, and is used to reverse the result of the conditional statement:. -> Normaalist tyhjä str = False. not komento kääntää tämän toisinpäin jolloinka False -> True ja if silmukka etenee.
@@ -83,7 +79,7 @@ if ikä_1 >= 12:
         elif valikko == "Tiedot" and pelin_tila == 2:
             print (f"\nNimi: {pelaaja1.nimi}{pelaaja1.ikä} \nSijainti: {pelaaja1.paikka}\nElämäpisteet: {pelaaja1.hp}\nInventaario: {pelaaja1.inventaario}")
             valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
-        elif valikko == "Tiedot" and pelin_tila == 2:
+        elif valikko == "Tiedot" and pelin_tila == 3:
             print (f"\nNimi: {pelaaja1.nimi}{pelaaja1.ikä} \nSijainti: {pelaaja1.paikka}\nElämäpisteet: {pelaaja1.hp}\nInventaario: {pelaaja1.inventaario}")
             valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
         elif valikko == "Tallenna":
@@ -101,7 +97,7 @@ if ikä_1 >= 12:
                 reppu(kauppias, inventaario)
                 if len (inventaario) == 4:
                     print("\nKaikki tuotteet on ostettu ja reppusi on nyt täysi!")
-                    print_slow("\nTesti") #Kaupungin hälytyskellot soivat! Metsän laidalta on kuulunut kiljuntaa!"
+                    print_slow("\nKaupungin hälytyskellot soivat! Metsän laidalta on kuulunut kiljuntaa!") #Hidas ja dramaattinen tulostus.
                     #pelin_tila == 2
                     if a == 1: menu = menu3 # Kun kaupassa on käyty, menu vaihtuu menu3 josta löytyy mahdollisuus siirtyä metsään.
                     valikko = input(f"{menu} \nMitäs seuraavaksi: ")
@@ -147,13 +143,8 @@ if ikä_1 >= 12:
                 elif ruokailu == "Ei":
                      print("Ehkä myöhemmin")
                      tavarat(pelaaja1.inventaario)
-                     valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
                 if pelin_tila == 2:
-                        valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
-                if pelin_tila == 3:
-                        valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
-                if pelin_tila == 2:
-                    valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
+                     valikko = (input(f"{menu_2} \nMitäs seuraavaksi: "))
                 if pelin_tila == 3:
                     valikko = (input(f"{menu_3} \nMitäs seuraavaksi: "))
         elif valikko == "Eteenpäin":
@@ -175,21 +166,23 @@ if ikä_1 >= 12:
                      print("\nLuuranko on päihittänyt sinut! Oispa Banaani..\n-The End-") # Lopetus 2/3
                      quit()
             if luuranko.hp <= 0:
-                     print("\nHurraaa! Luuranko on päihitetty!\n-The End-") #Lopetus 3/3
+                     print("\nHurraaa! Luuranko on päihitetty!\n-The End-") #Lopetus 3/3 
                      quit()
-            valikko = (input(f"{menu_3} \nMitä seuravaakasi: "))
-    if valikko == "Lopeta":
-        print("Peli loppuu")
-        
+            valikko = (input(f"{menu_3} \nMitä seuravaaksi: "))
 
-    else:
+        else:
             print("Tuntematon komento!") 
             if pelin_tila == 0:
-                valikko = (input(f"{menu2} \nMitäs seuraavaksi?: "))
+                        valikko = (input(f"{menu2} \nMitäs seuraavaksi?: "))
             if pelin_tila == 2:
-                           valikko = (input(f"{menu_2} \nMitäs seuraavaksi?: "))
+                                   valikko = (input(f"{menu_2} \nMitäs seuraavaksi?: "))
             if pelin_tila == 3:
-                valikko = (input(f"{menu_3} \nMitäs seuraavaksi?: "))
+                        valikko = (input(f"{menu_3} \nMitäs seuraavaksi?: "))
+if valikko == "Lopeta":
+            print("Peli loppuu")
+        
+
+    
     
         
 else:
