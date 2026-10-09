@@ -28,4 +28,7 @@ Otettu kestävä kehitys huomioon banaaninkuorien kierrättämisellä.
 6.10 - päivitetty pelin_tila 1,2,3 ja valikoiden toiminta ja päivittyminen pelin tilan edetessä. Banaanin syöminen antaa 10 elämäpistettä.
 
 7.10 - Luotu taistelu luurangon kanssa ja lyönti funktio joka myöhemmin muutettu metodiksi humanoidin alle, mahdollisuus hävitä mikä banaania ei syödä. Päivitetty valikoita ja pelin_tilaa lisää.
-Saati taistelu luotua ja peli on valmis.
+Saati taistelu luotua ja peli on valmis. Lyönti ja liikkumis funktio siirretty metodeiksi Humanoidoi luokan alle, toivottavasti tästä ei vähennetä pisteitä jos tarvittavaa määrää funktiota ei ole. Piti olla 5?
+
+9.10 - Viimeistelty jonkinverran ja kuvattu esittelyvideo.
+Tallennusta en saanut toimimaan pelin myöhäisemmissä vaiheissa koska esim luola on olio ja jotta tämän saataisiin tallennettua Json muoton pitää säätää, kikkailla ja opiskella lisää johon ei nyt ole energiaa tai aikaa. Jotenki oliot pitää muuttaa sanakirjamuotoon?? en oikein ymmärrä.

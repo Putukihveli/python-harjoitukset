@@ -1,10 +1,12 @@
 {
-    "pelaaja": "Arttu",
+    "pelaaja": "Artttu",
+    "ikä": 26,
     "sijainti": "Taverna",
     "varusteet": [
         "Banaani",
         "Kompassi",
         "Excalibur",
         "Säkki"
-    ]
+    ],
+    "pelin_tilanne": 0
 }

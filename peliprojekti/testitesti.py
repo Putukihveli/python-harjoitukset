@@ -40,7 +40,7 @@ menu_3 =("\nLyönti \nTiedot \nReppu")
 nimi = (input("\nAnna nimesi: "))
 ikä_1 = int(input("Anna ikäsi: "))
 
-pelaaja1 = Pelaaja(nimi,ikä_1,"Taverna",)
+pelaaja1 = Pelaaja(nimi,ikä_1,0,"Taverna",)
 aloitus_huone = Huone("Taverna","Hämärä","Lämmin","Kaupunki")
 kauppias = Kauppa("Kauppa","Kirkas","Lämmin", "Kaupunki",)
 miekka = Miekka("Excalibur", "5kg", "4-12.")
@@ -185,9 +185,6 @@ if ikä_1 >= 12:
 if valikko == "Lopeta":
             print("Peli loppuu")
         
-
-    
-    
         
 else:
    print("Olet liian nuori!")

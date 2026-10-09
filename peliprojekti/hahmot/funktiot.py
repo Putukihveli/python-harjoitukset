@@ -6,7 +6,7 @@ import sys,time
 
 def reppu(kauppa,inventaario):
     haettu_tavara = input ("\nLisätään tavara reppuun:") 
-    for tuote in kauppa.hylly:
+    for tuote in kauppa.hylly: # Käydään kauppa luokan "hylly" lista läpi.
         if str(tuote) == haettu_tavara:
             kauppa.hylly.remove(tuote)
             inventaario.append(tuote)
@@ -21,6 +21,9 @@ def tavarat(inventaario):
     print (f"Repussasi on: {inventaario}")
     return
 
+
+
+#Lyönti ja liikkuumis funktiot siirretty metodeiksi humanoidi luokan alle. toivottavasti tästä hyvästä ei vähennetä pisteitä. Funktioita piti olla tarvittava määrä?
 
 #def pelaaja_lyönti():
  #   vahinko = random.randint(4,12)
@@ -50,17 +53,29 @@ def print_slow(str): #dramaattinen tulostus lainattu stackoverflowsta :-D
 
 
 
-def tallenna(pelaaja1):
-    varusteet_lista = [str(esine) for esine in pelaaja1.inventaario]
-    tallennus_data = {
+def tallenna(pelaaja1):                                     # STR jono aiheutti ongelmia myöhemmässä vaiheessa kun peliä tallennetaan.. Toistaiseksi toimimaton.
+    varusteet_lista = [str(esine) for esine in pelaaja1.inventaario] # tehdään olioista str jono jolloinka tallennuksessa tulostettaessa ei tule ongelmia
+    tallennus_data = { # määritellään tallennettava data.
     "pelaaja": pelaaja1.nimi,
+    "ikä": pelaaja1.ikä,
     "sijainti": pelaaja1.paikka,
     "varusteet": varusteet_lista,
+    "pelin_tilanne": pelaaja1.pelin_tila,
 }
     with open("Save.json", "w", encoding="utf-8") as tiedosto:
         json.dump(tallennus_data, tiedosto, indent=4, ensure_ascii=False) # Sisentää neljällä välilyönnillä save on helpompilukuisempi. ensure_ascii=False koska json.dump muuntaa muuten kaikki ääkköset taas unicode-koodeiksi.
+    
+    
+    
+def lataa(pelaaja1):
     with open("Save.json", "r", encoding="utf-8") as tiedosto:
         data_luettu = json.load(tiedosto)
-    print(f"Pelaaja: {data_luettu['pelaaja']}")
-    print(f"Sijainti: {data_luettu['sijainti']}")
-    print(f"Varusteet: {', '.join(data_luettu['varusteet'])}")
+        pelaaja1.nimi = (f"{data_luettu['pelaaja']}")
+        pelaaja1.ikä = (f"{data_luettu['ikä']}")
+        pelaaja1.sijainti = (f"{data_luettu['sijainti']}")
+        pelaaja1.inventaario = (f"{data_luettu['varusteet']}")
+        pelaaja1.pelin_tila = (f"{data_luettu['pelin_tilanne']}")
+        print(f"Pelaaja: {data_luettu['pelaaja']}")
+        print(f"Sijainti: {data_luettu['sijainti']}")
+        print(f"Varusteet: {', '.join(data_luettu['varusteet'])}")
+        
